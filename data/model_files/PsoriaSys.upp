@@ -1,0 +1,28 @@
+death = Death;
+division = Division;
+steps  = 300;	
+MaBoSS = MaBoSS;
+
+$rate_LL37_Nucl u= p[(LL37_Nucl) = (1)];
+$rate_IFNa u= p[(IFNa) = (1)];
+$rate_IL12 u= p[(IL12) = (1)];
+$rate_IL23 u= p[(IL23) = (1)];
+$rate_TNFa u= p[(TNFa) = (1)];
+$rate_TGFb u= p[(TGFb) = (1)];
+$rate_IL6 u= p[(IL6) = (1)];
+$rate_IL17 u= p[(IL17) = (1)];
+$rate_IL1b u= p[(IL1b) = (1)];
+$rate_IL22 u= p[(IL22) = (1)];
+$rate_CCL20 u= p[(CCL20) = (1)];
+$rate_CXCL8 u= p[(CXCL8) = (1)];
+$rate_IL36 u= p[(IL36) = (1)];
+$rate_IL19 u= p[(IL19) = (1)];
+$rate_IL10 u= p[(IL10) = (1)];
+$rate_IL4 u= p[(IL4) = (1)];
+$rate_IFNg u= p[(IFNg) = (1)];
+$rate_KGF u= p[(KGF) = (1)];
+$rate_CD80 u= p[(CD80) = (1)];
+$rate_AMPs u= p[(AMPs) = (1)];
+$rate_LTB4 u= p[(LTB4) = (1)];
+$rate_LXs u= p[(LXs) = (1)];
+$rate_PGE2 u= p[(PGE2) = (1)];

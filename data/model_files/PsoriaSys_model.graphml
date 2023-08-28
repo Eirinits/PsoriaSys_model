@@ -1,0 +1,2845 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+    <key attr.name="SUID" attr.type="long" for="node" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="node" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="node" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="node" id="selected"/>
+    <key attr.name="d0" attr.type="int" for="node" id="d0"/>
+    <key attr.name="SUID" attr.type="long" for="edge" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="edge" id="shared name"/>
+    <key attr.name="shared interaction" attr.type="string" for="edge" id="shared interaction"/>
+    <key attr.name="name" attr.type="string" for="edge" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="edge" id="selected"/>
+    <key attr.name="interaction" attr.type="string" for="edge" id="interaction"/>
+    <key attr.name="d2" attr.type="int" for="edge" id="d2"/>
+    <key attr.name="SUID" attr.type="long" for="graph" id="SUID"/>
+    <key attr.name="shared name" attr.type="string" for="graph" id="shared name"/>
+    <key attr.name="name" attr.type="string" for="graph" id="name"/>
+    <key attr.name="selected" attr.type="boolean" for="graph" id="selected"/>
+    <key attr.name="__Annotations" attr.type="string" for="graph" id="__Annotations"/>
+    <graph edgedefault="directed" id="logical_rules.csv_4">
+        <node id="413">
+            <data key="SUID">413</data>
+            <data key="shared name">AhR</data>
+            <data key="name">AhR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="410">
+            <data key="SUID">410</data>
+            <data key="shared name">Th22</data>
+            <data key="name">Th22</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="407">
+            <data key="SUID">407</data>
+            <data key="shared name">aKC</data>
+            <data key="name">aKC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="404">
+            <data key="SUID">404</data>
+            <data key="shared name">LL37_Nucl</data>
+            <data key="name">LL37_Nucl</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="401">
+            <data key="SUID">401</data>
+            <data key="shared name">CXCL8</data>
+            <data key="name">CXCL8</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="398">
+            <data key="SUID">398</data>
+            <data key="shared name">ALX</data>
+            <data key="name">ALX</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="395">
+            <data key="SUID">395</data>
+            <data key="shared name">Neutrophil</data>
+            <data key="name">Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="392">
+            <data key="SUID">392</data>
+            <data key="shared name">NFKB1_Rela</data>
+            <data key="name">NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="389">
+            <data key="SUID">389</data>
+            <data key="shared name">TLR4</data>
+            <data key="name">TLR4</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="386">
+            <data key="SUID">386</data>
+            <data key="shared name">AMPs</data>
+            <data key="name">AMPs</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="383">
+            <data key="SUID">383</data>
+            <data key="shared name">BLT1</data>
+            <data key="name">BLT1</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="380">
+            <data key="SUID">380</data>
+            <data key="shared name">CCL20</data>
+            <data key="name">CCL20</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="377">
+            <data key="SUID">377</data>
+            <data key="shared name">CCR6</data>
+            <data key="name">CCR6</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="374">
+            <data key="SUID">374</data>
+            <data key="shared name">IL23</data>
+            <data key="name">IL23</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="371">
+            <data key="SUID">371</data>
+            <data key="shared name">iDC</data>
+            <data key="name">iDC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="368">
+            <data key="SUID">368</data>
+            <data key="shared name">M1</data>
+            <data key="name">M1</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="365">
+            <data key="SUID">365</data>
+            <data key="shared name">CD109</data>
+            <data key="name">CD109</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="362">
+            <data key="SUID">362</data>
+            <data key="shared name">TGFBR</data>
+            <data key="name">TGFBR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="359">
+            <data key="SUID">359</data>
+            <data key="shared name">Diff_KC</data>
+            <data key="name">Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="356">
+            <data key="SUID">356</data>
+            <data key="shared name">CD28</data>
+            <data key="name">CD28</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="353">
+            <data key="SUID">353</data>
+            <data key="shared name">Th0</data>
+            <data key="name">Th0</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="350">
+            <data key="SUID">350</data>
+            <data key="shared name">CTLA4</data>
+            <data key="name">CTLA4</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="347">
+            <data key="SUID">347</data>
+            <data key="shared name">CD80</data>
+            <data key="name">CD80</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="344">
+            <data key="SUID">344</data>
+            <data key="shared name">CEBPB</data>
+            <data key="name">CEBPB</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="341">
+            <data key="SUID">341</data>
+            <data key="shared name">IL6</data>
+            <data key="name">IL6</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="338">
+            <data key="SUID">338</data>
+            <data key="shared name">IL19</data>
+            <data key="name">IL19</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="335">
+            <data key="SUID">335</data>
+            <data key="shared name">CREB1</data>
+            <data key="name">CREB1</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="332">
+            <data key="SUID">332</data>
+            <data key="shared name">RORgamma</data>
+            <data key="name">RORgamma</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="329">
+            <data key="SUID">329</data>
+            <data key="shared name">IL23R</data>
+            <data key="name">IL23R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="326">
+            <data key="SUID">326</data>
+            <data key="shared name">IL12R</data>
+            <data key="name">IL12R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="323">
+            <data key="SUID">323</data>
+            <data key="shared name">CXCR2</data>
+            <data key="name">CXCR2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="320">
+            <data key="SUID">320</data>
+            <data key="shared name">IL10</data>
+            <data key="name">IL10</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="317">
+            <data key="SUID">317</data>
+            <data key="shared name">EP2</data>
+            <data key="name">EP2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="314">
+            <data key="SUID">314</data>
+            <data key="shared name">Th17</data>
+            <data key="name">Th17</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="311">
+            <data key="SUID">311</data>
+            <data key="shared name">EP4</data>
+            <data key="name">EP4</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="308">
+            <data key="SUID">308</data>
+            <data key="shared name">Fibroblast</data>
+            <data key="name">Fibroblast</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="305">
+            <data key="SUID">305</data>
+            <data key="shared name">KGF</data>
+            <data key="name">KGF</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="302">
+            <data key="SUID">302</data>
+            <data key="shared name">FOXP3</data>
+            <data key="name">FOXP3</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="299">
+            <data key="SUID">299</data>
+            <data key="shared name">Treg</data>
+            <data key="name">Treg</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="296">
+            <data key="SUID">296</data>
+            <data key="shared name">GATA3</data>
+            <data key="name">GATA3</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="293">
+            <data key="SUID">293</data>
+            <data key="shared name">Th2</data>
+            <data key="name">Th2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="290">
+            <data key="SUID">290</data>
+            <data key="shared name">IL4</data>
+            <data key="name">IL4</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="287">
+            <data key="SUID">287</data>
+            <data key="shared name">IL1b</data>
+            <data key="name">IL1b</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="284">
+            <data key="SUID">284</data>
+            <data key="shared name">IL12</data>
+            <data key="name">IL12</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="281">
+            <data key="SUID">281</data>
+            <data key="shared name">TNFa</data>
+            <data key="name">TNFa</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="278">
+            <data key="SUID">278</data>
+            <data key="shared name">TGFb</data>
+            <data key="name">TGFb</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="275">
+            <data key="SUID">275</data>
+            <data key="shared name">PGE2</data>
+            <data key="name">PGE2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="272">
+            <data key="SUID">272</data>
+            <data key="shared name">IFNa</data>
+            <data key="name">IFNa</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="269">
+            <data key="SUID">269</data>
+            <data key="shared name">IFNAR</data>
+            <data key="name">IFNAR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="266">
+            <data key="SUID">266</data>
+            <data key="shared name">STAT1</data>
+            <data key="name">STAT1</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="263">
+            <data key="SUID">263</data>
+            <data key="shared name">TYK2</data>
+            <data key="name">TYK2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="260">
+            <data key="SUID">260</data>
+            <data key="shared name">Death</data>
+            <data key="name">Death</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="257">
+            <data key="SUID">257</data>
+            <data key="shared name">IFNg</data>
+            <data key="name">IFNg</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="254">
+            <data key="SUID">254</data>
+            <data key="shared name">IFNGR</data>
+            <data key="name">IFNGR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="251">
+            <data key="SUID">251</data>
+            <data key="shared name">Prol_KC</data>
+            <data key="name">Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="248">
+            <data key="SUID">248</data>
+            <data key="shared name">IL10R</data>
+            <data key="name">IL10R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="245">
+            <data key="SUID">245</data>
+            <data key="shared name">M2</data>
+            <data key="name">M2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="242">
+            <data key="SUID">242</data>
+            <data key="shared name">Th1</data>
+            <data key="name">Th1</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="239">
+            <data key="SUID">239</data>
+            <data key="shared name">STAT3</data>
+            <data key="name">STAT3</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="236">
+            <data key="SUID">236</data>
+            <data key="shared name">NFKB1_hd</data>
+            <data key="name">NFKB1_hd</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="233">
+            <data key="SUID">233</data>
+            <data key="shared name">Tbet</data>
+            <data key="name">Tbet</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="230">
+            <data key="SUID">230</data>
+            <data key="shared name">IL17</data>
+            <data key="name">IL17</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="227">
+            <data key="SUID">227</data>
+            <data key="shared name">IL17R</data>
+            <data key="name">IL17R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="224">
+            <data key="SUID">224</data>
+            <data key="shared name">TRAF3IP2</data>
+            <data key="name">TRAF3IP2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="221">
+            <data key="SUID">221</data>
+            <data key="shared name">Division</data>
+            <data key="name">Division</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="218">
+            <data key="SUID">218</data>
+            <data key="shared name">IL19R</data>
+            <data key="name">IL19R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="215">
+            <data key="SUID">215</data>
+            <data key="shared name">IL1R</data>
+            <data key="name">IL1R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="212">
+            <data key="SUID">212</data>
+            <data key="shared name">IL1RL2</data>
+            <data key="name">IL1RL2</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="209">
+            <data key="SUID">209</data>
+            <data key="shared name">NFKBIZ</data>
+            <data key="name">NFKBIZ</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="206">
+            <data key="SUID">206</data>
+            <data key="shared name">IL22</data>
+            <data key="name">IL22</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="203">
+            <data key="SUID">203</data>
+            <data key="shared name">IL22R</data>
+            <data key="name">IL22R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="200">
+            <data key="SUID">200</data>
+            <data key="shared name">IL36</data>
+            <data key="name">IL36</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="197">
+            <data key="SUID">197</data>
+            <data key="shared name">IL4R</data>
+            <data key="name">IL4R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="194">
+            <data key="SUID">194</data>
+            <data key="shared name">STAT6</data>
+            <data key="name">STAT6</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="191">
+            <data key="SUID">191</data>
+            <data key="shared name">IL6R</data>
+            <data key="name">IL6R</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="188">
+            <data key="SUID">188</data>
+            <data key="shared name">ILC3</data>
+            <data key="name">ILC3</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="185">
+            <data key="SUID">185</data>
+            <data key="shared name">IRF7</data>
+            <data key="name">IRF7</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="182">
+            <data key="SUID">182</data>
+            <data key="shared name">KC</data>
+            <data key="name">KC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="179">
+            <data key="SUID">179</data>
+            <data key="shared name">LC</data>
+            <data key="name">LC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="176">
+            <data key="SUID">176</data>
+            <data key="shared name">KGFR</data>
+            <data key="name">KGFR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="173">
+            <data key="SUID">173</data>
+            <data key="shared name">TLR7</data>
+            <data key="name">TLR7</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="170">
+            <data key="SUID">170</data>
+            <data key="shared name">LTB4</data>
+            <data key="name">LTB4</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="167">
+            <data key="SUID">167</data>
+            <data key="shared name">LXs</data>
+            <data key="name">LXs</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="164">
+            <data key="SUID">164</data>
+            <data key="shared name">pDC</data>
+            <data key="name">pDC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="161">
+            <data key="SUID">161</data>
+            <data key="shared name">preDiff_KC</data>
+            <data key="name">preDiff_KC</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="158">
+            <data key="SUID">158</data>
+            <data key="shared name">TNFAR</data>
+            <data key="name">TNFAR</data>
+            <data key="selected">false</data>
+            <data key="d0">-1</data>
+        </node>
+        <node id="155">
+            <data key="SUID">155</data>
+            <data key="shared name">Trigger</data>
+            <data key="name">Trigger</data>
+            <data key="selected">false</data>
+            <data key="d0">0</data>
+        </node>
+        <edge source="413" target="410">
+            <data key="SUID">1154</data>
+            <data key="shared name">AhR (activates) Th22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">AhR (activates) Th22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="410" target="206">
+            <data key="SUID">1151</data>
+            <data key="shared name">Th22 (activates) IL22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th22 (activates) IL22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="407" target="404">
+            <data key="SUID">1148</data>
+            <data key="shared name">aKC (activates) LL37_Nucl</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">aKC (activates) LL37_Nucl</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="407" target="401">
+            <data key="SUID">1145</data>
+            <data key="shared name">aKC (activates) CXCL8</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">aKC (activates) CXCL8</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="404" target="173">
+            <data key="SUID">1142</data>
+            <data key="shared name">LL37_Nucl (activates) TLR7</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">LL37_Nucl (activates) TLR7</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="401" target="323">
+            <data key="SUID">1139</data>
+            <data key="shared name">CXCL8 (activates) CXCR2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CXCL8 (activates) CXCR2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="398" target="395">
+            <data key="SUID">1136</data>
+            <data key="shared name">ALX (inhibits) Neutrophil</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">ALX (inhibits) Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="398" target="392">
+            <data key="SUID">1133</data>
+            <data key="shared name">ALX (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">ALX (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="398" target="389">
+            <data key="SUID">1130</data>
+            <data key="shared name">ALX (inhibits) TLR4</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">ALX (inhibits) TLR4</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="395" target="404">
+            <data key="SUID">1127</data>
+            <data key="shared name">Neutrophil (activates) LL37_Nucl</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) LL37_Nucl</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="287">
+            <data key="SUID">1124</data>
+            <data key="shared name">Neutrophil (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="230">
+            <data key="SUID">1121</data>
+            <data key="shared name">Neutrophil (activates) IL17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="206">
+            <data key="SUID">1118</data>
+            <data key="shared name">Neutrophil (activates) IL22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) IL22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="374">
+            <data key="SUID">1115</data>
+            <data key="shared name">Neutrophil (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="200">
+            <data key="SUID">1112</data>
+            <data key="shared name">Neutrophil (activates) IL36</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) IL36</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="281">
+            <data key="SUID">1109</data>
+            <data key="shared name">Neutrophil (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="386">
+            <data key="SUID">1106</data>
+            <data key="shared name">Neutrophil (activates) AMPs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) AMPs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="275">
+            <data key="SUID">1103</data>
+            <data key="shared name">Neutrophil (activates) PGE2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) PGE2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="167">
+            <data key="SUID">1100</data>
+            <data key="shared name">Neutrophil (activates) LXs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) LXs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="395" target="170">
+            <data key="SUID">1097</data>
+            <data key="shared name">Neutrophil (activates) LTB4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Neutrophil (activates) LTB4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="287">
+            <data key="SUID">1094</data>
+            <data key="shared name">NFKB1_Rela (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="284">
+            <data key="SUID">1091</data>
+            <data key="shared name">NFKB1_Rela (activates) IL12</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) IL12</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="338">
+            <data key="SUID">1088</data>
+            <data key="shared name">NFKB1_Rela (activates) IL19</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) IL19</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="374">
+            <data key="SUID">1085</data>
+            <data key="shared name">NFKB1_Rela (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="209">
+            <data key="SUID">1082</data>
+            <data key="shared name">NFKB1_Rela (activates) NFKBIZ</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) NFKBIZ</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="200">
+            <data key="SUID">1079</data>
+            <data key="shared name">NFKB1_Rela (activates) IL36</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) IL36</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="392" target="386">
+            <data key="SUID">1076</data>
+            <data key="shared name">NFKB1_Rela (activates) AMPs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKB1_Rela (activates) AMPs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="389" target="392">
+            <data key="SUID">1073</data>
+            <data key="shared name">TLR4 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR4 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="389" target="401">
+            <data key="SUID">1070</data>
+            <data key="shared name">TLR4 (activates) CXCL8</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR4 (activates) CXCL8</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="386" target="389">
+            <data key="SUID">1067</data>
+            <data key="shared name">AMPs (activates) TLR4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">AMPs (activates) TLR4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="383" target="395">
+            <data key="SUID">1064</data>
+            <data key="shared name">BLT1 (activates) Neutrophil</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">BLT1 (activates) Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="380" target="377">
+            <data key="SUID">1061</data>
+            <data key="shared name">CCL20 (activates) CCR6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CCL20 (activates) CCR6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="380" target="374">
+            <data key="SUID">1058</data>
+            <data key="shared name">CCL20 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CCL20 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="377" target="371">
+            <data key="SUID">1055</data>
+            <data key="shared name">CCR6 (activates) iDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CCR6 (activates) iDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="377" target="368">
+            <data key="SUID">1052</data>
+            <data key="shared name">CCR6 (activates) M1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CCR6 (activates) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="377" target="395">
+            <data key="SUID">1049</data>
+            <data key="shared name">CCR6 (activates) Neutrophil</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CCR6 (activates) Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="374" target="329">
+            <data key="SUID">1046</data>
+            <data key="shared name">IL23 (activates) IL23R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL23 (activates) IL23R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="347">
+            <data key="SUID">1043</data>
+            <data key="shared name">iDC (activates) CD80</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) CD80</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="287">
+            <data key="SUID">1040</data>
+            <data key="shared name">iDC (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="341">
+            <data key="SUID">1037</data>
+            <data key="shared name">iDC (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="284">
+            <data key="SUID">1034</data>
+            <data key="shared name">iDC (activates) IL12</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) IL12</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="374">
+            <data key="SUID">1031</data>
+            <data key="shared name">iDC (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="281">
+            <data key="SUID">1028</data>
+            <data key="shared name">iDC (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="278">
+            <data key="SUID">1025</data>
+            <data key="shared name">iDC (activates) TGFb</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) TGFb</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="371" target="275">
+            <data key="SUID">1022</data>
+            <data key="shared name">iDC (activates) PGE2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">iDC (activates) PGE2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="368" target="374">
+            <data key="SUID">1019</data>
+            <data key="shared name">M1 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M1 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="368" target="281">
+            <data key="SUID">1016</data>
+            <data key="shared name">M1 (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M1 (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="368" target="278">
+            <data key="SUID">1013</data>
+            <data key="shared name">M1 (activates) TGFb</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M1 (activates) TGFb</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="368" target="275">
+            <data key="SUID">1010</data>
+            <data key="shared name">M1 (activates) PGE2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M1 (activates) PGE2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="365" target="362">
+            <data key="SUID">1007</data>
+            <data key="shared name">CD109 (inhibits) TGFBR</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">CD109 (inhibits) TGFBR</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="365" target="359">
+            <data key="SUID">1004</data>
+            <data key="shared name">CD109 (inhibits) Diff_KC</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">CD109 (inhibits) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="362" target="359">
+            <data key="SUID">1001</data>
+            <data key="shared name">TGFBR (activates) Diff_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TGFBR (activates) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="362" target="332">
+            <data key="SUID">998</data>
+            <data key="shared name">TGFBR (activates) RORgamma</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TGFBR (activates) RORgamma</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="362" target="302">
+            <data key="SUID">995</data>
+            <data key="shared name">TGFBR (activates) FOXP3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TGFBR (activates) FOXP3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="356" target="353">
+            <data key="SUID">992</data>
+            <data key="shared name">CD28 (activates) Th0</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CD28 (activates) Th0</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="356" target="350">
+            <data key="SUID">989</data>
+            <data key="shared name">CD28 (activates) CTLA4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CD28 (activates) CTLA4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="242">
+            <data key="SUID">986</data>
+            <data key="shared name">Th0 (activates) Th1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) Th1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="293">
+            <data key="SUID">983</data>
+            <data key="shared name">Th0 (activates) Th2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) Th2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="314">
+            <data key="SUID">980</data>
+            <data key="shared name">Th0 (activates) Th17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) Th17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="410">
+            <data key="SUID">977</data>
+            <data key="shared name">Th0 (activates) Th22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) Th22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="299">
+            <data key="SUID">974</data>
+            <data key="shared name">Th0 (activates) Treg</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="353" target="287">
+            <data key="SUID">971</data>
+            <data key="shared name">Th0 (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th0 (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="347" target="356">
+            <data key="SUID">968</data>
+            <data key="shared name">CD80 (activates) CD28</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CD80 (activates) CD28</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="347" target="353">
+            <data key="SUID">965</data>
+            <data key="shared name">CD80 (activates) Th0</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CD80 (activates) Th0</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="347" target="350">
+            <data key="SUID">962</data>
+            <data key="shared name">CD80 (activates) CTLA4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CD80 (activates) CTLA4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="344" target="341">
+            <data key="SUID">959</data>
+            <data key="shared name">CEBPB (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CEBPB (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="344" target="338">
+            <data key="SUID">956</data>
+            <data key="shared name">CEBPB (activates) IL19</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CEBPB (activates) IL19</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="341" target="191">
+            <data key="SUID">953</data>
+            <data key="shared name">IL6 (activates) IL6R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL6 (activates) IL6R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="338" target="218">
+            <data key="SUID">950</data>
+            <data key="shared name">IL19 (activates) IL19R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL19 (activates) IL19R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="335" target="332">
+            <data key="SUID">947</data>
+            <data key="shared name">CREB1 (activates) RORgamma</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CREB1 (activates) RORgamma</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="335" target="329">
+            <data key="SUID">944</data>
+            <data key="shared name">CREB1 (activates) IL23R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CREB1 (activates) IL23R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="335" target="326">
+            <data key="SUID">941</data>
+            <data key="shared name">CREB1 (activates) IL12R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CREB1 (activates) IL12R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="332" target="314">
+            <data key="SUID">938</data>
+            <data key="shared name">RORgamma (activates) Th17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">RORgamma (activates) Th17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="332" target="188">
+            <data key="SUID">935</data>
+            <data key="shared name">RORgamma (activates) ILC3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">RORgamma (activates) ILC3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="332" target="230">
+            <data key="SUID">932</data>
+            <data key="shared name">RORgamma (activates) IL17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">RORgamma (activates) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="329" target="332">
+            <data key="SUID">929</data>
+            <data key="shared name">IL23R (activates) RORgamma</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL23R (activates) RORgamma</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="329" target="413">
+            <data key="SUID">926</data>
+            <data key="shared name">IL23R (activates) AhR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL23R (activates) AhR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="329" target="299">
+            <data key="SUID">923</data>
+            <data key="shared name">IL23R (inhibits) Treg</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL23R (inhibits) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="329" target="239">
+            <data key="SUID">920</data>
+            <data key="shared name">IL23R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL23R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="329" target="263">
+            <data key="SUID">917</data>
+            <data key="shared name">IL23R (activates) TYK2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL23R (activates) TYK2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="326" target="233">
+            <data key="SUID">914</data>
+            <data key="shared name">IL12R (activates) Tbet</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL12R (activates) Tbet</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="326" target="263">
+            <data key="SUID">911</data>
+            <data key="shared name">IL12R (activates) TYK2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL12R (activates) TYK2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="323" target="395">
+            <data key="SUID">908</data>
+            <data key="shared name">CXCR2 (activates) Neutrophil</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">CXCR2 (activates) Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="323" target="320">
+            <data key="SUID">905</data>
+            <data key="shared name">CXCR2 (inhibits) IL10</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">CXCR2 (inhibits) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="320" target="248">
+            <data key="SUID">902</data>
+            <data key="shared name">IL10 (activates) IL10R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL10 (activates) IL10R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="320" target="299">
+            <data key="SUID">899</data>
+            <data key="shared name">IL10 (activates) Treg</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL10 (activates) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="317" target="314">
+            <data key="SUID">896</data>
+            <data key="shared name">EP2 (activates) Th17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP2 (activates) Th17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="317" target="335">
+            <data key="SUID">893</data>
+            <data key="shared name">EP2 (activates) CREB1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP2 (activates) CREB1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="314" target="230">
+            <data key="SUID">890</data>
+            <data key="shared name">Th17 (activates) IL17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th17 (activates) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="314" target="206">
+            <data key="SUID">887</data>
+            <data key="shared name">Th17 (activates) IL22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th17 (activates) IL22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="314" target="275">
+            <data key="SUID">884</data>
+            <data key="shared name">Th17 (activates) PGE2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th17 (activates) PGE2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="311" target="314">
+            <data key="SUID">881</data>
+            <data key="shared name">EP4 (activates) Th17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP4 (activates) Th17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="311" target="392">
+            <data key="SUID">878</data>
+            <data key="shared name">EP4 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP4 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="311" target="374">
+            <data key="SUID">875</data>
+            <data key="shared name">EP4 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP4 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="311" target="335">
+            <data key="SUID">872</data>
+            <data key="shared name">EP4 (activates) CREB1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">EP4 (activates) CREB1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="308" target="368">
+            <data key="SUID">869</data>
+            <data key="shared name">Fibroblast (activates) M1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Fibroblast (activates) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="308" target="320">
+            <data key="SUID">866</data>
+            <data key="shared name">Fibroblast (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Fibroblast (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="308" target="341">
+            <data key="SUID">863</data>
+            <data key="shared name">Fibroblast (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Fibroblast (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="308" target="305">
+            <data key="SUID">860</data>
+            <data key="shared name">Fibroblast (activates) KGF</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Fibroblast (activates) KGF</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="305" target="176">
+            <data key="SUID">857</data>
+            <data key="shared name">KGF (activates) KGFR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">KGF (activates) KGFR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="302" target="320">
+            <data key="SUID">854</data>
+            <data key="shared name">FOXP3 (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">FOXP3 (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="302" target="299">
+            <data key="SUID">851</data>
+            <data key="shared name">FOXP3 (activates) Treg</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">FOXP3 (activates) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="299" target="302">
+            <data key="SUID">848</data>
+            <data key="shared name">Treg (activates) FOXP3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Treg (activates) FOXP3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="299" target="320">
+            <data key="SUID">845</data>
+            <data key="shared name">Treg (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Treg (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="296" target="293">
+            <data key="SUID">842</data>
+            <data key="shared name">GATA3 (activates) Th2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">GATA3 (activates) Th2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="296" target="320">
+            <data key="SUID">839</data>
+            <data key="shared name">GATA3 (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">GATA3 (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="296" target="290">
+            <data key="SUID">836</data>
+            <data key="shared name">GATA3 (activates) IL4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">GATA3 (activates) IL4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="293" target="320">
+            <data key="SUID">833</data>
+            <data key="shared name">Th2 (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th2 (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="293" target="290">
+            <data key="SUID">830</data>
+            <data key="shared name">Th2 (activates) IL4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th2 (activates) IL4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="290" target="296">
+            <data key="SUID">827</data>
+            <data key="shared name">IL4 (activates) GATA3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL4 (activates) GATA3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="290" target="197">
+            <data key="SUID">824</data>
+            <data key="shared name">IL4 (activates) IL4R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL4 (activates) IL4R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="287" target="215">
+            <data key="SUID">821</data>
+            <data key="shared name">IL1b (activates) IL1R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL1b (activates) IL1R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="284" target="326">
+            <data key="SUID">818</data>
+            <data key="shared name">IL12 (activates) IL12R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL12 (activates) IL12R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="281" target="158">
+            <data key="SUID">815</data>
+            <data key="shared name">TNFa (activates) TNFAR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFa (activates) TNFAR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="278" target="362">
+            <data key="SUID">812</data>
+            <data key="shared name">TGFb (activates) TGFBR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TGFb (activates) TGFBR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="275" target="317">
+            <data key="SUID">809</data>
+            <data key="shared name">PGE2 (activates) EP2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">PGE2 (activates) EP2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="275" target="311">
+            <data key="SUID">806</data>
+            <data key="shared name">PGE2 (activates) EP4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">PGE2 (activates) EP4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="275" target="167">
+            <data key="SUID">803</data>
+            <data key="shared name">PGE2 (activates) LXs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">PGE2 (activates) LXs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="272" target="269">
+            <data key="SUID">800</data>
+            <data key="shared name">IFNa (activates) IFNAR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNa (activates) IFNAR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="371">
+            <data key="SUID">797</data>
+            <data key="shared name">IFNAR (activates) iDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) iDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="266">
+            <data key="SUID">794</data>
+            <data key="shared name">IFNAR (activates) STAT1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) STAT1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="368">
+            <data key="SUID">791</data>
+            <data key="shared name">IFNAR (activates) M1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="392">
+            <data key="SUID">788</data>
+            <data key="shared name">IFNAR (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="263">
+            <data key="SUID">785</data>
+            <data key="shared name">IFNAR (activates) TYK2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) TYK2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="269" target="260">
+            <data key="SUID">782</data>
+            <data key="shared name">IFNAR (activates) Death</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNAR (activates) Death</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="266" target="368">
+            <data key="SUID">779</data>
+            <data key="shared name">STAT1 (activates) M1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT1 (activates) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="266" target="287">
+            <data key="SUID">776</data>
+            <data key="shared name">STAT1 (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT1 (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="266" target="284">
+            <data key="SUID">773</data>
+            <data key="shared name">STAT1 (activates) IL12</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT1 (activates) IL12</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="266" target="374">
+            <data key="SUID">770</data>
+            <data key="shared name">STAT1 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT1 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="263" target="266">
+            <data key="SUID">767</data>
+            <data key="shared name">TYK2 (activates) STAT1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TYK2 (activates) STAT1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="263" target="392">
+            <data key="SUID">764</data>
+            <data key="shared name">TYK2 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TYK2 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="263" target="239">
+            <data key="SUID">761</data>
+            <data key="shared name">TYK2 (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TYK2 (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="263" target="284">
+            <data key="SUID">758</data>
+            <data key="shared name">TYK2 (activates) IL12</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TYK2 (activates) IL12</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="257" target="254">
+            <data key="SUID">755</data>
+            <data key="shared name">IFNg (activates) IFNGR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNg (activates) IFNGR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="257" target="293">
+            <data key="SUID">752</data>
+            <data key="shared name">IFNg (inhibits) Th2</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IFNg (inhibits) Th2</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="254" target="251">
+            <data key="SUID">749</data>
+            <data key="shared name">IFNGR (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNGR (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="254" target="371">
+            <data key="SUID">746</data>
+            <data key="shared name">IFNGR (activates) iDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNGR (activates) iDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="254" target="266">
+            <data key="SUID">743</data>
+            <data key="shared name">IFNGR (activates) STAT1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNGR (activates) STAT1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="254" target="341">
+            <data key="SUID">740</data>
+            <data key="shared name">IFNGR (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IFNGR (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="251">
+            <data key="SUID">737</data>
+            <data key="shared name">Prol_KC (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="161">
+            <data key="SUID">734</data>
+            <data key="shared name">Prol_KC (activates) preDiff_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) preDiff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="365">
+            <data key="SUID">731</data>
+            <data key="shared name">Prol_KC (activates) CD109</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) CD109</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="287">
+            <data key="SUID">728</data>
+            <data key="shared name">Prol_KC (activates) IL1b</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="341">
+            <data key="SUID">725</data>
+            <data key="shared name">Prol_KC (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="338">
+            <data key="SUID">722</data>
+            <data key="shared name">Prol_KC (activates) IL19</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) IL19</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="380">
+            <data key="SUID">719</data>
+            <data key="shared name">Prol_KC (activates) CCL20</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) CCL20</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="374">
+            <data key="SUID">716</data>
+            <data key="shared name">Prol_KC (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="209">
+            <data key="SUID">713</data>
+            <data key="shared name">Prol_KC (activates) NFKBIZ</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) NFKBIZ</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="200">
+            <data key="SUID">710</data>
+            <data key="shared name">Prol_KC (activates) IL36</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) IL36</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="281">
+            <data key="SUID">707</data>
+            <data key="shared name">Prol_KC (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="401">
+            <data key="SUID">704</data>
+            <data key="shared name">Prol_KC (activates) CXCL8</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) CXCL8</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="386">
+            <data key="SUID">701</data>
+            <data key="shared name">Prol_KC (activates) AMPs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) AMPs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="275">
+            <data key="SUID">698</data>
+            <data key="shared name">Prol_KC (activates) PGE2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) PGE2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="170">
+            <data key="SUID">695</data>
+            <data key="shared name">Prol_KC (activates) LTB4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) LTB4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="221">
+            <data key="SUID">692</data>
+            <data key="shared name">Prol_KC (activates) Division</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) Division</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="251" target="260">
+            <data key="SUID">689</data>
+            <data key="shared name">Prol_KC (activates) Death</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Prol_KC (activates) Death</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="248" target="368">
+            <data key="SUID">686</data>
+            <data key="shared name">IL10R (inhibits) M1</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL10R (inhibits) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="248" target="245">
+            <data key="SUID">683</data>
+            <data key="shared name">IL10R (activates) M2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL10R (activates) M2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="248" target="242">
+            <data key="SUID">680</data>
+            <data key="shared name">IL10R (inhibits) Th1</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL10R (inhibits) Th1</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="248" target="314">
+            <data key="SUID">677</data>
+            <data key="shared name">IL10R (inhibits) Th17</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL10R (inhibits) Th17</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="248" target="410">
+            <data key="SUID">674</data>
+            <data key="shared name">IL10R (inhibits) Th22</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL10R (inhibits) Th22</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="248" target="239">
+            <data key="SUID">671</data>
+            <data key="shared name">IL10R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL10R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="248" target="236">
+            <data key="SUID">668</data>
+            <data key="shared name">IL10R (activates) NFKB1_hd</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL10R (activates) NFKB1_hd</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="245" target="320">
+            <data key="SUID">665</data>
+            <data key="shared name">M2 (activates) IL10</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M2 (activates) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="245" target="167">
+            <data key="SUID">662</data>
+            <data key="shared name">M2 (activates) LXs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">M2 (activates) LXs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="242" target="257">
+            <data key="SUID">659</data>
+            <data key="shared name">Th1 (activates) IFNg</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th1 (activates) IFNg</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="242" target="281">
+            <data key="SUID">656</data>
+            <data key="shared name">Th1 (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Th1 (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="329">
+            <data key="SUID">653</data>
+            <data key="shared name">STAT3 (activates) IL23R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL23R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="341">
+            <data key="SUID">650</data>
+            <data key="shared name">STAT3 (activates) IL6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="230">
+            <data key="SUID">647</data>
+            <data key="shared name">STAT3 (activates) IL17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="206">
+            <data key="SUID">644</data>
+            <data key="shared name">STAT3 (activates) IL22</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL22</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="380">
+            <data key="SUID">641</data>
+            <data key="shared name">STAT3 (activates) CCL20</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) CCL20</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="374">
+            <data key="SUID">638</data>
+            <data key="shared name">STAT3 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="209">
+            <data key="SUID">635</data>
+            <data key="shared name">STAT3 (activates) NFKBIZ</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) NFKBIZ</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="200">
+            <data key="SUID">632</data>
+            <data key="shared name">STAT3 (activates) IL36</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) IL36</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="281">
+            <data key="SUID">629</data>
+            <data key="shared name">STAT3 (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="401">
+            <data key="SUID">626</data>
+            <data key="shared name">STAT3 (activates) CXCL8</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) CXCL8</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="239" target="305">
+            <data key="SUID">623</data>
+            <data key="shared name">STAT3 (activates) KGF</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">STAT3 (activates) KGF</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="236" target="392">
+            <data key="SUID">620</data>
+            <data key="shared name">NFKB1_hd (inhibits) NFKB1_Rela</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">NFKB1_hd (inhibits) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="233" target="242">
+            <data key="SUID">617</data>
+            <data key="shared name">Tbet (activates) Th1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Tbet (activates) Th1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="233" target="290">
+            <data key="SUID">614</data>
+            <data key="shared name">Tbet (inhibits) IL4</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">Tbet (inhibits) IL4</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="233" target="281">
+            <data key="SUID">611</data>
+            <data key="shared name">Tbet (activates) TNFa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Tbet (activates) TNFa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="230" target="227">
+            <data key="SUID">608</data>
+            <data key="shared name">IL17 (activates) IL17R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17 (activates) IL17R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="251">
+            <data key="SUID">605</data>
+            <data key="shared name">IL17R (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="359">
+            <data key="SUID">602</data>
+            <data key="shared name">IL17R (inhibits) Diff_KC</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL17R (inhibits) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="227" target="395">
+            <data key="SUID">599</data>
+            <data key="shared name">IL17R (activates) Neutrophil</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) Neutrophil</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="392">
+            <data key="SUID">596</data>
+            <data key="shared name">IL17R (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="239">
+            <data key="SUID">593</data>
+            <data key="shared name">IL17R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="344">
+            <data key="SUID">590</data>
+            <data key="shared name">IL17R (activates) CEBPB</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) CEBPB</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="224">
+            <data key="SUID">587</data>
+            <data key="shared name">IL17R (activates) TRAF3IP2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) TRAF3IP2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="227" target="221">
+            <data key="SUID">584</data>
+            <data key="shared name">IL17R (activates) Division</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL17R (activates) Division</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="224" target="392">
+            <data key="SUID">581</data>
+            <data key="shared name">TRAF3IP2 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TRAF3IP2 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="218" target="308">
+            <data key="SUID">578</data>
+            <data key="shared name">IL19R (activates) Fibroblast</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL19R (activates) Fibroblast</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="215" target="239">
+            <data key="SUID">575</data>
+            <data key="shared name">IL1R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL1R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="212" target="251">
+            <data key="SUID">572</data>
+            <data key="shared name">IL1RL2 (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL1RL2 (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="212" target="359">
+            <data key="SUID">569</data>
+            <data key="shared name">IL1RL2 (inhibits) Diff_KC</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL1RL2 (inhibits) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="212" target="392">
+            <data key="SUID">566</data>
+            <data key="shared name">IL1RL2 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL1RL2 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="212" target="209">
+            <data key="SUID">563</data>
+            <data key="shared name">IL1RL2 (activates) NFKBIZ</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL1RL2 (activates) NFKBIZ</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="209" target="200">
+            <data key="SUID">560</data>
+            <data key="shared name">NFKBIZ (activates) IL36</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKBIZ (activates) IL36</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="209" target="401">
+            <data key="SUID">557</data>
+            <data key="shared name">NFKBIZ (activates) CXCL8</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKBIZ (activates) CXCL8</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="209" target="386">
+            <data key="SUID">554</data>
+            <data key="shared name">NFKBIZ (activates) AMPs</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">NFKBIZ (activates) AMPs</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="206" target="203">
+            <data key="SUID">551</data>
+            <data key="shared name">IL22 (activates) IL22R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL22 (activates) IL22R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="203" target="251">
+            <data key="SUID">548</data>
+            <data key="shared name">IL22R (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL22R (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="203" target="359">
+            <data key="SUID">545</data>
+            <data key="shared name">IL22R (inhibits) Diff_KC</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL22R (inhibits) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="203" target="239">
+            <data key="SUID">542</data>
+            <data key="shared name">IL22R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL22R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="203" target="221">
+            <data key="SUID">539</data>
+            <data key="shared name">IL22R (activates) Division</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL22R (activates) Division</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="203" target="260">
+            <data key="SUID">536</data>
+            <data key="shared name">IL22R (activates) Death</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL22R (activates) Death</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="200" target="212">
+            <data key="SUID">533</data>
+            <data key="shared name">IL36 (activates) IL1RL2</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL36 (activates) IL1RL2</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="200" target="389">
+            <data key="SUID">530</data>
+            <data key="shared name">IL36 (activates) TLR4</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL36 (activates) TLR4</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="197" target="194">
+            <data key="SUID">527</data>
+            <data key="shared name">IL4R (activates) STAT6</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL4R (activates) STAT6</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="197" target="197">
+            <data key="SUID">524</data>
+            <data key="shared name">IL4R (activates) IL4R</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL4R (activates) IL4R</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="194" target="287">
+            <data key="SUID">521</data>
+            <data key="shared name">STAT6 (inhibits) IL1b</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">STAT6 (inhibits) IL1b</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="194" target="230">
+            <data key="SUID">518</data>
+            <data key="shared name">STAT6 (inhibits) IL17</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">STAT6 (inhibits) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="191" target="332">
+            <data key="SUID">515</data>
+            <data key="shared name">IL6R (activates) RORgamma</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL6R (activates) RORgamma</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="191" target="413">
+            <data key="SUID">512</data>
+            <data key="shared name">IL6R (activates) AhR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL6R (activates) AhR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="191" target="299">
+            <data key="SUID">509</data>
+            <data key="shared name">IL6R (inhibits) Treg</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">IL6R (inhibits) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="191" target="239">
+            <data key="SUID">506</data>
+            <data key="shared name">IL6R (activates) STAT3</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IL6R (activates) STAT3</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="188" target="230">
+            <data key="SUID">503</data>
+            <data key="shared name">ILC3 (activates) IL17</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">ILC3 (activates) IL17</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="185" target="374">
+            <data key="SUID">500</data>
+            <data key="shared name">IRF7 (activates) IL23</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IRF7 (activates) IL23</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="185" target="272">
+            <data key="SUID">497</data>
+            <data key="shared name">IRF7 (activates) IFNa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">IRF7 (activates) IFNa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="182" target="179">
+            <data key="SUID">494</data>
+            <data key="shared name">KC (activates) LC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">KC (activates) LC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="182" target="359">
+            <data key="SUID">491</data>
+            <data key="shared name">KC (activates) Diff_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">KC (activates) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="179" target="299">
+            <data key="SUID">488</data>
+            <data key="shared name">LC (activates) Treg</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">LC (activates) Treg</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="176" target="251">
+            <data key="SUID">485</data>
+            <data key="shared name">KGFR (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">KGFR (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="164">
+            <data key="SUID">482</data>
+            <data key="shared name">TLR7 (activates) pDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) pDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="371">
+            <data key="SUID">479</data>
+            <data key="shared name">TLR7 (activates) iDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) iDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="368">
+            <data key="SUID">476</data>
+            <data key="shared name">TLR7 (activates) M1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) M1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="347">
+            <data key="SUID">473</data>
+            <data key="shared name">TLR7 (activates) CD80</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) CD80</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="392">
+            <data key="SUID">470</data>
+            <data key="shared name">TLR7 (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="173" target="185">
+            <data key="SUID">467</data>
+            <data key="shared name">TLR7 (activates) IRF7</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TLR7 (activates) IRF7</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="170" target="383">
+            <data key="SUID">464</data>
+            <data key="shared name">LTB4 (activates) BLT1</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">LTB4 (activates) BLT1</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="167" target="398">
+            <data key="SUID">461</data>
+            <data key="shared name">LXs (activates) ALX</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">LXs (activates) ALX</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="164" target="347">
+            <data key="SUID">458</data>
+            <data key="shared name">pDC (activates) CD80</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">pDC (activates) CD80</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="164" target="272">
+            <data key="SUID">455</data>
+            <data key="shared name">pDC (activates) IFNa</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">pDC (activates) IFNa</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="161" target="161">
+            <data key="SUID">452</data>
+            <data key="shared name">preDiff_KC (activates) preDiff_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">preDiff_KC (activates) preDiff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="161" target="359">
+            <data key="SUID">449</data>
+            <data key="shared name">preDiff_KC (activates) Diff_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">preDiff_KC (activates) Diff_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="251">
+            <data key="SUID">446</data>
+            <data key="shared name">TNFAR (activates) Prol_KC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) Prol_KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="164">
+            <data key="SUID">443</data>
+            <data key="shared name">TNFAR (activates) pDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) pDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="371">
+            <data key="SUID">440</data>
+            <data key="shared name">TNFAR (activates) iDC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) iDC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="413">
+            <data key="SUID">437</data>
+            <data key="shared name">TNFAR (activates) AhR</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) AhR</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="320">
+            <data key="SUID">434</data>
+            <data key="shared name">TNFAR (inhibits) IL10</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">TNFAR (inhibits) IL10</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="158" target="392">
+            <data key="SUID">431</data>
+            <data key="shared name">TNFAR (activates) NFKB1_Rela</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) NFKB1_Rela</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="221">
+            <data key="SUID">428</data>
+            <data key="shared name">TNFAR (activates) Division</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) Division</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="158" target="260">
+            <data key="SUID">425</data>
+            <data key="shared name">TNFAR (activates) Death</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">TNFAR (activates) Death</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+        <edge source="155" target="182">
+            <data key="SUID">422</data>
+            <data key="shared name">Trigger (inhibits) KC</data>
+            <data key="shared interaction">inhibits</data>
+            <data key="name">Trigger (inhibits) KC</data>
+            <data key="selected">false</data>
+            <data key="interaction">inhibits</data>
+            <data key="d2">-1</data>
+        </edge>
+        <edge source="155" target="407">
+            <data key="SUID">416</data>
+            <data key="shared name">Trigger (activates) aKC</data>
+            <data key="shared interaction">activates</data>
+            <data key="name">Trigger (activates) aKC</data>
+            <data key="selected">false</data>
+            <data key="interaction">activates</data>
+            <data key="d2">1</data>
+        </edge>
+    </graph>
+</graphml>

@@ -1,0 +1,702 @@
+// Inputs and outputs
+
+Node KC {
+  logic = (!Trigger);
+  rate_up = @logic ? $u_KC : 0;
+  rate_down = @logic ? 0 : $d_KC;
+}
+
+Node LC {
+  logic = (KC);
+  rate_up = @logic ? $u_LC : 0;
+  rate_down = @logic ? 0 : $d_LC;
+}
+
+Node aKC {
+  logic = (Trigger);
+  rate_up = @logic ? $u_aKC : 0;
+  rate_down = @logic ? 0 : $d_aKC;
+}
+
+// Epidermal hyperproliferation is also further amplified by IL-17-induced autocrine production of IL-19 and IL-36 by keratinocytes https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5796120/
+// Synergistically upregulated genes included some of the highest expressed genes in psoriatic skin with an impressive correlation between IL-17/TNF-α-induced genes and the psoriasis gene signature. https://www.sciencedirect.com/science/article/pii/S0022202X15351757
+
+Node Prol_KC {
+  logic = (IL22R | IL17R | IFNGR | IL1RL2);
+  rate_up = (@logic ? $u_Prol_KC : 0) + ((IL22R & IL17R & IFNGR & TNFAR & IL1RL2 & KGFR) ? $u_Prol_KC : 0.0);
+  rate_down = @logic ? 0 : $d_Prol_KC;
+}
+
+// The genes modulated by IL-22 but not IL-17 are part of the keratinocyte terminal differentiation pathway: keratin 1, filaggrin and CALML5 that were all downregulated by IL-22. https://pubmed.ncbi.nlm.nih.gov/18684158/
+
+Node Diff_KC {
+  logic = (!IL22R & !IL17R & !IL1RL2 & preDiff_KC) | (KC) | (TGFBR & !CD109);
+  rate_up = @logic ? $u_Diff_KC : 0;
+  rate_down = @logic ? 0 : $d_Diff_KC;
+}
+
+Node preDiff_KC {
+  logic = (Prol_KC);
+  rate_up = @logic ? $u_Diff_KC : 0;
+  rate_down = @logic ? 0 : $d_Diff_KC;
+}
+
+// pDCs are characterized by HLA− DR+CD11c− CD123+BDCA-2+ . In addition to TNF-α, IL-1β, and IL-6, pDCs produce a significant amount of interferon (IFN)-α, which is necessary to initiate the inflammatory response in psoriasis. Furthermore, the inhibition of IFN-α production by pDCs is observed to block the development of psoriasis in mouse models. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+
+// In pDCs, following the activation of endosomal TLRs including TLRs 7, 8, and 9, IRF7 is phosphorylated after activation by the MyD88 signalosome and then translocates to the nucleus to induce transcription of the genes encoding type I IFNs. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+
+Node pDC {
+  logic = (TLR7);
+  rate_up = @logic ? $u_pDC : 0;
+  rate_down = @logic ? 0 + (TNFAR ? 1/6 : 0) : $d_pDC;
+}
+
+// IL-1 is further amplifying Th17 response while TNF and IFN-γ is creating a back loop to mDCs activation. https://www.frontiersin.org/articles/10.3389/fimmu.2019.02376/full
+// For example, epidermal injury can trigger high-level production of CCL20 in keratinocytes (11), and this chemokine then has the ability to attract CD11c+ myeloid dendritic cells (DCs) into the dermis https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229247/
+// These factors can stimulate keratinocytes to release CCL20, leading to PDC-independent MDC activation and T-helper 17 (Th17) cell recruitment https://pubmed.ncbi.nlm.nih.gov/30566935/ 
+// Autocrine TNF-α stimulation of slan-DC allows for a higher production level of IL-12, IL-23, IL-1β and IL-6. https://onlinelibrary.wiley.com/doi/full/10.1111/1346-8138.15184 -- TO CHECK
+
+Node iDC {
+  logic = (TLR7 | IFNAR | TNFAR | IFNGR | CCR6);
+  rate_up = ((TLR7 | IFNAR | IFNGR | CCR6) ? $u_iDC : 0) + (TNFAR ? $u_iDC : 0);
+  rate_down = @logic ? 0 : $d_iDC;
+}
+
+//https://www.sciencedirect.com/science/article/pii/S1359610121000939?via%3Dihub#sec0005
+
+Node M1 {
+  logic = ((CCR6 & IFNAR & STAT1) | TLR7 | Fibroblast) & !IL10R;
+  rate_up = @logic ? $u_M1 : 0;
+  rate_down = @logic ? 0 : $d_M1;
+}
+
+// the addition of PGE2 to LPS-stimulated macrophages represses proinflammatory cytokine production but induces IL-10. https://www.frontiersin.org/articles/10.3389/fimmu.2016.00160/full
+
+Node M2 {
+  logic = (IL10R);
+  rate_up = @logic ? $u_M1 : 0;
+  rate_down = @logic ? 0 : $d_M1;
+}
+
+//  Lipoxin A4 and LTD4 bind and compete with essentially equal affinity at CysLT1 and CysLT2 [17], [5], [14], [18], [19], providing a molecular basis for Lipoxin serving as a local damper of both vascular CysLT1 / CysLT2 signals as well as Lipoxin/ FPRL1-regulated neutrophil trafficking [7]. https://commerce.bio-rad.com/en-no/prime-pcr-assays/pathway/inhibitory-action-lipoxin-a4-pdgf-egf-ltd4-signaling#2690_16968948
+
+Node Neutrophil {
+  logic = (IL17R | CXCR2 | CCR6 | BLT1) & !ALX;
+  rate_up = @logic ? $u_Neutrophil : 0;
+  rate_down = @logic ? 0 : $d_Neutrophil;
+}
+
+// CTLA-4 has a stronger binding affinity to these ligands than CD28, leading to the suppression of effector T cell responses https://www.frontiersin.org/articles/10.3389/fphar.2021.717042/full
+// In addition, Liu et al. reported that membrane CTLA-4 (mCTLA-4) expression in the skin lesions of patients with mild psoriasis was significantly higher than that in patients with moderate and severe psoriasis. This might indicate that the expression of mCTLA-4 in skin lesions was inversely correlated with the severity of psoriasis https://www.frontiersin.org/articles/10.3389/fphar.2021.717042/full
+
+Node Th0 {
+  logic = (CD80 & CD28);
+  rate_up = @logic ? $u_Th0 : 0;
+  rate_down = @logic ? 0 : $d_Th0;
+ // rate_down = (CD80 & CD28 &! CTLA4 ? 0 : $d_Th0) + (CTLA4 ? $d_Th0 : 0.0);
+}
+
+Node Th1 {
+  logic = (Th0 & Tbet & !IL10R);
+  rate_up = @logic ? $u_Th1 : 0;
+  rate_down = @logic ? 0 : $d_Th1;
+}
+
+Node Th2 {
+  logic = (Th0 & GATA3 & !IFNg);
+  rate_up = @logic ? $u_Th2 : 0;
+  rate_down = @logic ? 0 : $d_Th2;
+}
+
+// For example, epidermal injury can trigger high-level production of CCL20 in keratinocytes (11), and this chemokine then has the ability to attract CD11c+ myeloid dendritic cells (DCs) into the dermis as well as CCR6+ IL-17-producing T cells into sites of injury. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229247/
+// These factors can stimulate keratinocytes to release CCL20, leading to PDC-independent MDC activation and T-helper 17 (Th17) cell recruitment https://pubmed.ncbi.nlm.nih.gov/30566935/ 
+
+Node Th17 {
+  logic = (Th0 & RORgamma & !IL10R & EP2 & EP4);
+//  rate_up = @logic ? $u_Th17 + (CCR6 ? $u_Th17 : 0) : 0;
+  rate_up = @logic ? $u_Th17 : 0;
+  rate_down = @logic ? 0 : $d_Th17;
+}
+
+// The differentiation of T cells producing only IL-22 was efficiently induced in naive T cells by plasmacytoid dendritic cells in an IL-6- and tumor necrosis factor–dependent way. https://www.nature.com/articles/ni.1767
+
+Node Th22 {
+  logic =  (Th0 & AhR & !IL10R);
+//  rate_up = @logic ? $u_Th22 + (CCR6 ? $u_Th22 : 0) : 0;
+  rate_up = @logic ? $u_Th22 : 0;
+  rate_down = @logic ? 0 : $d_Th22;
+}
+
+// The relationship between TGFβ and Th17 cells likely indicates a further connection to CD4+CD25+Foxp3+ Tregs since TGFβ also induces differentiation of naïve T cells into Foxp3+ Tregs in the absence of IL-6 or IL-23. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5683130/
+// Here, we showed that anti-inflammatory interleukin-10 (IL-10), and not pro-inflammatory IL-6 and IL-23 cytokine signaling, endowed Treg cells with the ability to suppress pathogenic Th17 cell responses. Ablation of the IL-10 receptor in Treg cells resulted in selective dysregulation of Th17 cell responses https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3088485/
+
+Node Treg {
+  logic = (LC) | (Th0 & !IL23R & !IL6R & FOXP3) | (IL10);
+  rate_up = @logic ? $u_Treg : 0;
+  rate_down = @logic ? 0 : $d_Treg;
+}
+
+Node Fibroblast {
+  logic = (IL19R);
+  rate_up = @logic ? $u_Fibroblast : 0;
+  rate_down = @logic ? 0 : $d_Fibroblast;
+}
+
+Node ILC3 {
+  logic = (RORgamma);
+  rate_up = @logic ? $u_ILC3 : 0;
+  rate_down = @logic ? 0 : $d_ILC3;
+}
+
+// Ligands
+
+// Self-DNA/LL37 and Self-RNA/LL37 released by from dying cells in the epidermis, activating the innate immune responses in the DCs.
+// In fact, NETs contain the antimicrobial peptide LL37 that triggers activation of monocytes and other antigen-presenting cells through the formation of complexes with NET-DNA. https://www.sciencedirect.com/science/article/pii/S0022202X19315702
+
+Node LL37_Nucl {
+  logic = (aKC | Neutrophil);
+  rate_up = @logic ? $u_LL37_Nucl : 0;
+  rate_down = @logic ? 0 : $d_LL37_Nucl;
+}
+
+// Furthermore, we reported that TNF-α modulates IL-1β production https://www.frontiersin.org/articles/10.3389/fimmu.2016.00160/full
+// Keratinocytes have been shown to produce IL-1β. IL-1β also functions on keratinocytes in an autocrine fashion https://www.jidonline.org/article/S0022-202X(18)32478-3/fulltext
+// Previous studies have shown that cytosolic DNA fragments in psoriatic skin stimulate inflammasome AIM2 activation in keratinocytes, leading to increased IL-1β production https://www.jidonline.org/article/S0022-202X(18)32478-3/fulltext
+
+Node IL1b {
+  logic = (Th0 | NFKB1_Rela | Prol_KC) | (iDC & STAT1 &! STAT6) | (Neutrophil);
+  rate_up = @logic ? $u_IL1b : 0;
+  rate_down = @logic ? 0 : $d_IL1b;
+}
+
+// T-bet also binds to an IL-4 silencer region and inhibits IL-4 expression https://pubmed.ncbi.nlm.nih.gov/17195845/
+
+Node IL4 {
+  logic = (Th2 & GATA3 &!Tbet);
+  rate_up = @logic ? $u_IL4 : 0;
+  rate_down = @logic ? 0 : $d_IL4;
+}
+
+//Inflammatory mDCs produce TNF-α, IL-6, IL-12, IL-20, and IL-23, which are cytokines with critical roles in driving T cell differentiation into Th1 and Th17 phenotypes. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/ 
+//IL-17A is secreted as a homodimer and binds to its receptor IL-17R on keratinocytes, leading to increased production of the cytokines TNF-α, IL-1β, IL-8, and IL-6. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5921865/
+//The expression of IL-6 is increased in murine skin after subcutaneous injection of IFN-γ https://www.sciencedirect.com/science/article/pii/S1359610121000939?via%3Dihub#sec0005 -- TO CHECK
+// Several IL-17 fingerprint genes (e.g., CXCL1, MIP-2, CXCL5, IL-6, LCN2, and COX2) are transcribed by C/EBP-β and C/EBP-δ https://www.sciencedirect.com/science/article/pii/S0022202X15351757
+
+Node IL6 {
+  logic = (iDC) | (Prol_KC & (STAT3 | CEBPB)) | (Fibroblast & IFNGR) ;
+  rate_up = @logic ? $u_IL6 : 0;
+  rate_down = @logic ? 0 : $d_IL6;
+}
+
+// Moreover,  it  has  been  shown  that  upon stimulation with IL/8 and TNF, psoriatic fibroblasts are not able to produce IL/10 https://ijaai.tums.ac.ir/index.php/ijaai/article/view/2473/1616
+
+Node IL10 {
+  logic = (Treg & FOXP3) | (Fibroblast & !CXCR2 & !TNFAR) | (M2) | (Th2 & GATA3);
+  rate_up = @logic ? $u_IL10 : 0;
+  rate_down = @logic ? 0 : $d_IL10;
+}
+
+// NF-κB promotes Th1 cell differentiation by regulating TCR signaling as well as functioning in innate immune cells to mediate induction of cytokines, such as IL-12, which promote Th1 differentiation. https://www.nature.com/articles/sigtrans201723
+// LL37/RNA complexes can also activate TLR8 in mDCs to produce IL-12 and IL-23. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+// Expression of Tyk2 in dendritic cells is required for IL-12, IL-23, and IFN-γ production and the induction of Th1 cell differentiation https://doi.org/10.1182/blood-2006-11-059246
+
+Node IL12 {
+  logic = (iDC & TYK2 & (STAT1 | NFKB1_Rela));
+  rate_up = @logic ? $u_IL12 : 0;
+  rate_down = @logic ? 0 : $d_IL12;
+}
+
+// These results confirm that a substantial proportion of neutrophils produce IL-17 in lesional psoriatic skin. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5921865/
+// CD8 T cells participate not only in the production of IL-17A but also in that of tumor necrosis factor (TNF) and IFN-γ https://www.sciencedirect.com/science/article/pii/S0022202X15362047#f0010
+// Downregulation of IL-17 by IL-4 is dependent on STAT6 and mediated by inhibition of STAT3 binding at the Il17a promoter. https://pubmed.ncbi.nlm.nih.gov/21949021/
+
+Node IL17 {
+  logic =  (Th17 & RORgamma) | (Neutrophil) | (ILC3 & RORgamma) | (Th17 & STAT3 &! STAT6);
+  rate_up = @logic ? $u_IL17 : 0;
+  rate_down = @logic ? 0 : $d_IL17;
+}
+
+// The combination of IL-17 and TNF-α results in the synergistic expression of IL-19 in keratinocytes. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/
+
+Node IL19 {
+  logic = Prol_KC & (NFKB1_Rela | CEBPB);
+  rate_up = @logic ? $u_IL19 : 0;
+  rate_down = @logic ? 0 : $d_IL19;
+}
+
+// In summary, this study suggests that neutrophils, long known to be a part of the histological characteristics of psoriasis, contribute to the skin inflammation by producing IL-17 and IL-22. PMC5921865/
+// Following the appropriate trigger in resolved lesions, skin-residing CD4+ T cells would drive keratinocyte pathology through IL-22 production https://onlinelibrary.wiley.com/doi/10.1111/bjd.20963
+
+Node IL22 {
+  logic = (Th22 & STAT3) | (Neutrophil) | (Th17 & STAT3);
+  rate_up = @logic ? $u_IL22 : 0;
+  rate_down = @logic ? 0 : $d_IL22;
+}
+
+// IL-23 is produced by dendritic cells and activated macrophages https://www.mdpi.com/2073-4409/9/9/2044/htm
+// LL37/RNA complexes can also activate TLR8 in mDCs to produce IL-12 and IL-23. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+// Sources of IL-23 include monocytes (also under the influence of CCL20) https://pubmed.ncbi.nlm.nih.gov/30566935/
+// These results suggest that the induction of IL-23 in DCs requires PGE2-EP4 signaling and is dependent on the cAMP-Epac pathway.
+
+Node IL23 {
+  logic = (iDC & EP4 & (IRF7 | NFKB1_Rela | STAT3 | STAT1)) | (Prol_KC & NFKB1_Rela) | (M1 & CCL20) | (Neutrophil);
+  rate_up = @logic ? $u_IL23 : 0;
+  rate_down = @logic ? 0 : $d_IL23;
+}
+
+// Proteinase 3 released from neutrophils cleaves pro-IL-36 to activated IL-36 cytokine amplifying the response of mDCs. https://www.frontiersin.org/articles/10.3389/fimmu.2019.02376/full#B5
+// IL-17A also upregulates the production of the neutrophil-attracting cyto-/chemokines IL-36 https://onlinelibrary.wiley.com/doi/full/10.1111/sji.12846
+// IL-17A upregulates IL-36G production more potently in human psoriasis-derived keratinocytes than in healthy keratinocytes https://www.mdpi.com/1422-0067/21/4/1275/htm
+//  Many of these IκBζ-inducible genes are typically overexpressed in psoriasis, including genes for antimicrobial proteins (DEFB4 and LCN2), S100 proteins (S100A7, S100A8, and S100A9), and chemo- and cytokines (CSF2, CSF3, CXCL8, IL23A, and IL36A). https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6176600/
+
+Node IL36 {
+  logic = (Prol_KC & (STAT3 | NFKB1_Rela | NFKBIZ)) | (Neutrophil);
+  rate_up = @logic ? $u_IL36 : 0;
+  rate_down = @logic ? 0 : $d_IL36;
+}
+
+// Cytokines such as TNF, IL-23, and IL-12 are produced by TLR7/8-stimulated myeloid DC, while pDC make type I-interferons (IFNα), all of which fuel the psoriatic inflammation https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6676248/
+// The LL-37/DNA complex activates TLR7 and TLR9 in plasmacytoid dendritic cells (pDCs) to release pro-inflammatory cytokines and type I IFNs, which activate the maturation of myeloid dendritic cells (mDCs). https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+// Studies have shown a role for pDCs during the initiation phase of psoriasis. Nestle et al., with their xenograft mouse model of human psoriasis, demonstrated that the development of psoriasis can be prevented by blocking IFN-α. Furthermore, sequential analysis of psoriasis development in xenograft model revealed that IFN-α signaling signature is actually present in developing psoriasis, and precedes the characteristic psoriatic phenotype  https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4163895/
+// pDCs are characterized by HLA− DR+CD11c− CD123+BDCA-2+ . In addition to TNF-α, IL-1β, and IL-6, pDCs produce a significant amount of interferon (IFN)-α, which is necessary to initiate the inflammatory response in psoriasis. Furthermore, the inhibition of IFN-α production by pDCs is observed to block the development of psoriasis in mouse models. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+// In pDCs, following the activation of endosomal TLRs including TLRs 7, 8, and 9, IRF7 is phosphorylated after activation by the MyD88 signalosome and then translocates to the nucleus to induce transcription of the genes encoding type I IFNs. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+
+Node IFNa {
+  logic = (pDC & IRF7);
+  rate_up = @logic ? $u_IFNa : 0;
+  rate_down = @logic ? 0 : $d_IFNa;
+}
+
+//  CD8 T cells participate not only in the production of IL-17A but also in that of tumor necrosis factor (TNF) and IFN-γ https://www.sciencedirect.com/science/article/pii/S0022202X15362047#f0010
+
+Node IFNg {
+  logic = (Th1);
+  rate_up = @logic ? $u_IFNg : 0;
+  rate_down = @logic ? 0 : $d_IFNg;
+}
+
+// IL-17A is secreted as a homodimer and binds to its receptor IL-17R on keratinocytes, leading to increased production of the cytokines TNF-α, IL-1β, IL-8, and IL-6. Stimulation of keratinocytes with IL-17 also upregulates gene expression of human β-defensin 2 and other antimicrobial peptides and chemokine CCL20 https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5921865/
+// For example, epidermal injury can trigger high-level production of CCL20 in keratinocytes, and this chemokine then has the ability to attract CD11c+ myeloid dendritic cells (DCs) into the dermis https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4229247/
+// These factors can stimulate keratinocytes to release CCL20, leading to PDC-independent MDC activation and T-helper 17 (Th17) cell recruitment https://pubmed.ncbi.nlm.nih.gov/30566935/ 
+// CCL20 is constitutively expressed in cultured keratinocytes, and its production is upregulated by TNF-α and IL-17A  https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/
+
+Node CCL20 {
+  logic = (Prol_KC & STAT3);
+  rate_up = @logic ? $u_CCL20 : 0;
+  rate_down = @logic ? 0 : $d_CCL20;
+}
+
+// IL-17A is secreted as a homodimer and binds to its receptor IL-17R on keratinocytes, leading to increased production of the cytokines TNF-α, IL-1β, IL-8, and IL-6. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5921865/
+//  Inflammatory mDCs, also known as TNF/iNOS-producing DCs (Tip-DCs), are present in high numbers in psoriatic skin lesions than in the normal skin and play an important role in the pathogenesis of psoriasis. Inflammatory mDCs produce TNF-α, IL-6, IL-12, IL-20, and IL-23, which are cytokines with critical roles in driving T cell differentiation into Th1 and Th17 phenotypes. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+// Macrophages incubated during 24 h with stimulated psoriatic fibroblast conditioned media (PFCM) exhibited a clear pro-inflammatory profile, producing high levels of TNF-α and low levels of the anti-inflammatory cytokine IL-10 https://www.frontiersin.org/articles/10.3389/fimmu.2019.00536/full#h4
+
+Node TNFa {
+  logic =  (Prol_KC & STAT3) | (Th1 & Tbet) | (iDC) | (Neutrophil) | (M1);
+  rate_up = @logic ? $u_TNFa : 0;
+  rate_down = @logic ? 0 : $d_TNFa;
+}
+
+// IL-17A is secreted as a homodimer and binds to its receptor IL-17R on keratinocytes, leading to increased production of the cytokines TNF-α, IL-1β, IL-8, and IL-6. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5921865/ 
+// Both IL-17 and IL-22 stimulate the recruitment of leukocyte subsets into inflamed psoriatic lesions by inducing the production and release of chemokines such as CXCL2, CXCL3, CXCL5 and CXCL8 by keratinocytes https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5796120/
+// IL-36G induces CXCL1 and CXCL8 expression in an autocrine fashion in keratinocytes and recruits neutrophils https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/
+//  Many of these IκBζ-inducible genes are typically overexpressed in psoriasis, including genes for antimicrobial proteins (DEFB4 and LCN2), S100 proteins (S100A7, S100A8, and S100A9), and chemo- and cytokines (CSF2, CSF3, CXCL8, IL23A, and IL36A). https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6176600/
+
+Node CXCL8 {
+  logic = (aKC) | (Prol_KC & (STAT3 | NFKBIZ | TLR4));
+  rate_up = @logic ? $u_CXCL8 : 0;
+  rate_down = @logic ? 0 : $d_CXCL8;
+}
+
+// Table 1. Cytokine: TGFb Cellular source: Macrophages, mDC https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4389010/
+// why AND? Change to OR
+
+Node TGFb {
+  logic = (iDC & M1); 
+  rate_up = @logic ? $u_TGFb : 0;
+  rate_down = @logic ? 0 : $d_TGFb;
+}
+
+// CD109 is expressed on the keratinocyte cell surface and is released via an endogenous lipase into the extracellular milieu. Membrane-anchored CD109 has been documented to bind the TGF-β protein as well as interact with the TGF-β receptor and alter its stability and function. https://journals.sagepub.com/doi/10.1177/247553031016a00303
+//  Thus, CD109 regulates TGF-β receptor endocytosis and degradation to inhibit TGF-β signaling. https://www.sciencedirect.com/science/article/pii/S016748891100036X?via%3Dihub
+
+Node CD109 {
+  logic = (Prol_KC); 
+  rate_up = @logic ? $u_CD109 : 0;
+  rate_down = @logic ? 0 : $d_CD109;
+}
+
+Node KGF {
+  logic = (Fibroblast & STAT3);
+  rate_up = @logic ? $u_KGF : 0.0;
+  rate_down = @logic ? 0.0 : $d_KGF;
+}
+
+// Antimicrobial peptides such as S100As, LCN2
+// Combined with IL-17, IL-22 can induce AMP production by keratinocytes [83] and parakeratosis and acanthosis by increasing keratinocyte proliferation and inhibit keratinocyte differentiation during part of the tissue-remodeling phase of wound repair, which are observed in psoriasis https://www.intechopen.com/chapters/54988
+//  Many of these IκBζ-inducible genes are typically overexpressed in psoriasis, including genes for antimicrobial proteins (DEFB4 and LCN2), S100 proteins (S100A7, S100A8, and S100A9), and chemo- and cytokines (CSF2, CSF3, CXCL8, IL23A, and IL36A). https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6176600/
+
+Node AMPs {
+  logic = (Prol_KC & (NFKB1_Rela | NFKBIZ)) | (Neutrophil);
+  rate_up = @logic ? $u_AMPs : 0;
+  rate_down = @logic ? 0 : $d_AMPs;
+}
+
+// Lipoxins LXA4, LXB4
+// . Mobilization of LX biosynthetic circuit occurs, for example, when infiltrating PMNs (which express 5-LO) interact with tissue resident cells (which express 15-LO) in inflamed target organs. In an autocrine, paracrine, or juxtacrine manner, newly formed LXs can interact with specific receptors on leukocytes to regulate their function
+// In this context, local PGE2 and PGD2 stimulate the processing of 15-LO mRNA in leukocytes to produce functional enzymes for the synthesis of lipoxin. AA is then converted to anti-inflammatory lipid mediators, such as LXs  https://www.frontiersin.org/articles/10.3389/fimmu.2016.00160/full
+// Accordingly, efferocytosis is coupled with increased release of TGF-β and IL-10 and lower levels of proinflammatory cytokines, such as IL-6 (238–240). This change in the phenotype of macrophages also activates pro-resolving mechanisms, because they generate LXA4, which stimulates phagocytic activities without releasing proinflammatory mediators. 
+
+Node LXs {
+  logic = (M2 & PGE2 & Neutrophil);
+  rate_up = @logic ? $u_AMPs : 0;
+  rate_down = @logic ? 0 : $d_AMPs;
+}
+
+Node PGE2 {
+  logic = (Prol_KC | Neutrophil | M1 | Th17 | iDC);
+  rate_up = @logic ? $u_AMPs : 0;
+  rate_down = @logic ? 0 : $d_AMPs;
+}
+
+Node LTB4 {
+  logic = (Prol_KC | Neutrophil);
+  rate_up = @logic ? $u_AMPs : 0;
+  rate_down = @logic ? 0 : $d_AMPs;
+}
+
+
+// Receptors
+
+// LTB4 Receptor
+Node BLT1 {
+  logic = (LTB4);
+  rate_up = @logic ? $u_BLT1 : 0.0;
+  rate_down = @logic ? 0.0 : $d_BLT1;
+}
+
+// Node representing LXA4 receptor
+Node ALX {
+  logic = (LXs);
+  rate_up = @logic ? $u_ALX : 0.0;
+  rate_down = @logic ? 0.0 : $d_ALX;
+}
+
+// PGE2 Receptor
+Node EP4 {
+  logic = (PGE2);
+  rate_up = @logic ? $u_EP4 : 0.0;
+  rate_down = @logic ? 0.0 : $d_EP4;
+}
+
+Node EP2 {
+  logic = (PGE2);
+  rate_up = @logic ? $u_EP2 : 0.0;
+  rate_down = @logic ? 0.0 : $d_EP2;
+}
+
+Node TLR7 {
+  logic = (LL37_Nucl);
+  rate_up = @logic ? $u_TLR7 : 0.0;
+  rate_down = @logic ? 0.0 : $d_TLR7;
+}
+
+// These data suggest that IL-36γ, secreted by NETs-stimulated keratinocytes, induces TLR4 expression, priming keratinocytes to respond to NETs, and subsequently synergizes with TLR4 activation to stimulate keratinocytes to highly express LCN2. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6460719/
+//  A significant increase in the expression of RAGE (Fig. 6A,B and Suppl. Figure S8), TLR4 (Fig. 6D,E and Suppl. Figure S9), p-ERK1/2 (Fig. 6G,H and Suppl. Figure S10), and nuclear NF-κB p65 (Fig. 6I,J and Suppl. Figure S11) was noted in the cell samples that were stimulated with LPS. These effects were substantially inhibited by LXA4. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC5541073/
+
+Node TLR4 {
+  logic = (AMPs | IL36) & !ALX;
+  rate_up = @logic ? $u_TLR4 : 0.0;
+  rate_down = @logic ? 0.0 : $d_TLR4;
+}
+
+Node IL22R {
+  logic = (IL22);
+  rate_up = @logic ? $u_IL22R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL22R;
+}
+
+Node IL17R {
+  logic = (IL17);
+  rate_up = @logic ? $u_IL17R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL17R;
+}
+
+// Node representing IFNGR1 and IFNGR2
+
+Node IFNGR {
+  logic = (IFNg);
+  rate_up = @logic ? $u_IFNGR : 0.0;
+  rate_down = @logic ? 0.0 : $d_IFNGR;
+}
+
+Node IFNAR {
+  logic = (IFNa);
+  rate_up = @logic ? $u_IFNAR : 0.0;
+  rate_down = @logic ? 0.0 : $d_IFNAR;
+}
+
+// cAMP and other cytokines induce the expression of IL-23R via the EP2 receptor https://www.hindawi.com/journals/mi/2021/9087816/
+// 2hPGE2-EP2/EP4 signaling facilitates the nuclear localization of CREB and IL-23-activated STAT3 via the cAMP-PKA pathway. CREB and STAT3 cooperatively induce the gene expression of Il23r.
+
+Node IL23R {
+  logic = (IL23 & (CREB1 & STAT3));
+  rate_up = @logic ? $u_IL23R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL23R;
+}
+
+// Node representing 
+//  These data suggested that promotion of Th1 differentiation by PGE2 is likely to be initiated through induction of IL-12Rb2 via EP2 and EP4 receptors. https://www.nature.com/articles/ncomms2684.pdf?origin=ppub !CHECK!
+// PGE2 acts on EP2 or EP4 receptors to generate cAMP and cAMP activates PKA, which in turn directly phosphorylates CREB and induces dephosphorylation and nuclear translocation of CRTC2 through inhibiting SIK2. Activated CREB and CRTC2 together promote gene transcription of IL-12Rb2 and IFN-gR1, receptors for two critical cytokines of Th1 differentiation. https://www.nature.com/articles/ncomms2684.pdf?origin=ppub
+
+Node IL12R {
+  logic = (IL12 & CREB1);
+  rate_up = @logic ? $u_IL12R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL12R;
+}
+
+Node TNFAR {
+  logic = (TNFa);
+  rate_up = @logic ? $u_TNFAR : 0.0;
+  rate_down = @logic ? 0.0 : $d_TNFAR;
+}
+
+// Node representing TGFβR1/TGFβR2	
+// Signaling abnormalities   are   accompanied   by   a   clear downregulation of the TGF/β type I and II receptors in the  psoriatic  skin.  This  process  involves  the participation  of  CD109  that  downregulates  TGF/β signaling by enhancing TGF/β receptor internalization and degradation. https://ijaai.tums.ac.ir/index.php/ijaai/article/view/2473/1616
+
+Node TGFBR {
+  logic = (TGFb & !CD109);
+  rate_up = @logic ? $u_TGFBR : 0;
+  rate_down = @logic ? 0 : $d_TGFBR;
+}
+
+Node IL6R {
+  logic = (IL6);
+  rate_up = @logic ? $u_IL6R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL6R;
+}
+
+Node IL10R {
+  logic = (IL10);
+  rate_up = @logic ? $u_IL10R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL10R;
+}
+
+Node IL1R {
+  logic = (IL1b);
+  rate_up = @logic ? $u_IL1R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL1R;
+}
+
+Node CCR6 {
+  logic = (CCL20);
+  rate_up = @logic ? $u_CCR6 : 0.0;
+  rate_down = @logic ? 0.0 : $d_CCR6;
+}
+
+// IL-17A upregulates the expression of multiple neutrophilchemoattracting chemokines on keratinocytes, including CXCL1, CXCL3, CXCL5, CXCL6 and CXCL8, all of which activate the chemokine receptor CXCR2; CXCL2 also activates CXCR1.
+
+Node CXCR2 {
+  logic = (CXCL8);
+  rate_up = @logic ? $u_CXCR2 : 0.0;
+  rate_down = @logic ? 0.0 : $d_CXCR2;
+}
+
+Node IL19R {
+  logic = (IL19);
+  rate_up = @logic ? $u_IL19R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL19R;
+}
+
+Node IL1RL2 {
+  logic = (IL36);
+  rate_up = @logic ? $u_IL1RL2 : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL1RL2;
+}
+
+Node IL4R {
+  logic = (IL4);
+  rate_up = @logic ? $u_IL4R : 0.0;
+  rate_down = @logic ? 0.0 : $d_IL4R;
+}
+
+Node KGFR {
+  logic = (KGF);
+  rate_up = @logic ? $u_KGFR : 0.0;
+  rate_down = @logic ? 0.0 : $d_KGFR;
+}
+
+// Transcription factors
+
+// Notably, PGE2 treatment alone maintained the number of IL-17–producing cells and markedly expanded both the number and the percentage of IL-17–producing cells in the presence of IL-23. These results show that PGE2 potently stimulates IL-23 action on TH17 expansion. https://www.nature.com/articles/nm.1968 
+
+Node RORgamma {
+  logic = (IL23R & CREB1) | (TGFBR & IL6R & IL23R);
+  rate_up = @logic ? $u_RORgamma : 0.0;
+  rate_down = @logic ? 0.0 : $d_RORgamma;
+} 
+
+// IL-23 signaling activates STAT3, inducing the expression of RORγt which prompts the Th17 response by promoting the expression of IL17A, IL17F, IL22, IL23R.
+// STAT3 and ERK1/2 Signaling Pathways were Activated in IL-22-treated HaCaT Cells https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0040797
+// IL-17A activates various other signal molecules including signal transducer and activator of transcription 3 (STAT3) in keratinocytes  https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/
+//  IL-1β–induced CCL-20 production in mouse keratinocytes was dependent on the STAT3 and NF-κB pathway but independent of the MAPK and mTOR pathways. https://www.jidonline.org/article/S0022-202X(18)32478-3/fulltext
+
+Node STAT3 {
+  logic = (IL17R | IL22R | IL23R | IL6R | IL10R | IL1R) & TYK2;
+  rate_up = @logic ? $u_STAT3 : 0.0;
+  rate_down = @logic ? 0.0 : $d_STAT3;
+}
+
+Node STAT6 {
+  logic = (IL4R);
+  rate_up = @logic ? $u_STAT6 : 0.0;
+  rate_down = @logic ? 0.0 : $d_STAT6;
+}
+
+Node Tbet {
+  logic = (IL12R);
+  rate_up = @logic ? $u_Tbet : 0.0;
+  rate_down = @logic ? 0.0 : $d_Tbet;
+}
+
+Node FOXP3 {
+  logic = (TGFBR & Treg);
+  rate_up = @logic ? $u_FOXP3 : 0.0;
+  rate_down = @logic ? 0.0 : $d_FOXP3;
+}
+
+Node GATA3 {
+  logic = (IL4);
+  rate_up = @logic ? $u_GATA3 : 0.0;
+  rate_down = @logic ? 0.0 : $d_GATA3;
+}
+
+
+// PGE2-EP2/EP4 signaling-induced IL-22 production from Th22 cells. PGE2-EP2/EP4 signaling promotes the gene expression of Ahr through the cAMP-PKA pathway. By the addition of IL-23 signaling, AHR synergistically activates Il22 gene expression. doi:10.1093/intimm/dxz021
+
+Node AhR {
+  logic =  (TNFAR & IL6R & IL23R);
+  rate_up = @logic ? $u_AhR + ((EP2|EP4) ? $u_AhR : 0) : 0;
+  rate_down = @logic ? 0 : $d_AhR;
+}
+
+// Induction of IκBζ by IL-36 was mediated by NF-κB and STAT3 https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC6176600/
+
+Node NFKBIZ {
+  logic = (Prol_KC & IL1RL2 & (NFKB1_Rela | STAT3));
+  rate_up = @logic ? $u_FOXP3 : 0.0;
+  rate_down = @logic ? 0.0 : $d_FOXP3;
+}
+
+
+
+// IFN-induced NF-κB activation was found to require TYK2 but not JAK1 https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC3128784/
+// Indirect: We found that TNF-R1-mediated IKK activation requires both RIP and TRAF2 proteins. Although TRAF2 or RIP can be independently recruited to the TNF-R1 complex, neither one of them alone is capable of transducing the TNF signal that leads to IKK activation  PMID:10795740
+//  IL-17A activates C/EBPβ or C/EBPδ and to a lesser extent NF-κB https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/ -- TO CHECK
+// p65/p50 heterodimer is the predominant form of functionally active NF-κB with proinflammatory activity, since this dimer enhances the transcription of genes related to the proinflammatory phase. https://www.frontiersin.org/articles/10.3389/fimmu.2016.00160/full
+//  Moreover, upon LPS stimulation, macrophages express p65/p50 heterodimer in predominance over p50/50 homodimer, thereby provoking the proinflammatory state.
+// Lipoxin controls synthesis and release of pro-inflammatory cytokines by increasing the mRNA level of suppressors of cytokine signaling and prevent transcription of inflammatory cytokines like IL-8 by inhibiting nuclear accumulation of NFκB and AP-1. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC4598198/
+
+Node NFKB1_Rela {
+  logic = (TNFAR | (IL17R & TRAF3IP2) | (IFNAR & TYK2) | TLR7 | IL1RL2 | TLR4 | EP4) & !(NFKB1_hd | ALX);
+  rate_up = @logic ? $u_NFKB1_Rela : 0.0;
+  rate_down = @logic ? 0.0 : $d_NFKB1_Rela;
+}
+
+// Node representing the p50/p50 homodimer (hd). 
+// On the other hand, p50/cRel, p65/cRel, or p50/p50 seems to be involved in the transcription of genes related to the recovery phase https://www.frontiersin.org/articles/10.3389/fimmu.2016.00160/full
+// Moreover, upon LPS stimulation, macrophages express p65/p50 heterodimer in predominance over p50/50 homodimer, thereby provoking the proinflammatory state. However, in later time points, these macrophages show p105 degradation, nuclear translocation of p50, and formation of p50/p50 homodimer, presumably as an adaptive cellular response to proinflammatory insult.
+ 
+Node NFKB1_hd {
+  logic = (IL10R);
+  rate_up = @logic ? $u_NFKB1_hd : 0.0;
+  rate_down = @logic ? 0.0 : $d_NFKB1_hd;
+}
+// Type I IFN and type III IFN both activate intracellular JAK1 and tyrosine kinase (TYK)2, resulting in tyrosine phosphorylation and aggregation of STAT1 and STAT2, which further leads to the formation of STAT1-STAT2 heterodimers. https://www.sciencedirect.com/science/article/pii/S1359610121000939?via%3Dihub#sec0005
+
+Node TYK2 {
+  logic = (IL23R | IL12R | IFNAR);
+  rate_up = @logic ? $u_TYK2 : 0.0;
+  rate_down = @logic ? 0.0 : $d_TYK2;
+}
+
+// IFN-γ binds as a homodimer and induces the dimerization and recruitment of IFNGR, which activates intracellular signaling molecules JAK1 and JAK2, leading to the phosphorylation of STAT1. https://www.sciencedirect.com/science/article/pii/S1359610121000939?via%3Dihub#sec0005
+// Type I IFN and type III IFN both activate intracellular JAK1 and tyrosine kinase (TYK)2, resulting in tyrosine phosphorylation and aggregation of STAT1 and STAT2, which further leads to the formation of STAT1-STAT2 heterodimers.  In addition, type I IFN also activates STAT1 and STAT3 in response to inflammation https://www.sciencedirect.com/science/article/pii/S1359610121000939?via%3Dihub#sec0005
+
+Node STAT1 {
+  logic = (IFNAR & TYK2) | (IFNGR);
+  rate_up = @logic ? $u_STAT1 : 0.0;
+  rate_down = @logic ? 0.0 : $d_STAT1;
+}
+
+// In pDCs, following the activation of endosomal TLRs including TLRs 7, 8, and 9, IRF7 is phosphorylated after activation by the MyD88 signalosome and then translocates to the nucleus to induce transcription of the genes encoding type I IFNs. https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC8308930/
+
+Node IRF7 {
+  logic = (TLR7);
+  rate_up = @logic ? $u_IRF7 : 0.0;
+  rate_down = @logic ? 0.0 : $d_IRF7;
+}
+
+Node TRAF3IP2 {
+  logic = (IL17R);
+  rate_up = @logic ? $u_TRAF3IP2 : 0.0;
+  rate_down = @logic ? 0.0 : $d_TRAF3IP2;
+}
+
+//  IL-17A activates C/EBPβ or C/EBPδ and to a lesser extent NF-κB https://www.ncbi.nlm.nih.gov/labs/pmc/articles/PMC7072868/ 
+
+Node CEBPB {
+  logic = (IL17R);
+  rate_up = @logic ? $u_CEBPB : 0.0;
+  rate_down = @logic ? 0.0 : $d_CEBPB;
+}
+
+Node CREB1 {
+  logic = (EP2 | EP4);
+  rate_up = @logic ? $u_FOXP3 : 0.0;
+  rate_down = @logic ? 0.0 : $d_FOXP3;
+}
+
+// Co-stimulatory molecules
+
+//While CD28 is expressed by both resting and activated T-cells, CTLA-4 is expressed only on activated T-cells https://www.tandfonline.com/doi/abs/10.1517/13543784.9.9.2147
+
+Node CTLA4 {
+  logic = (CD28 & CD80 &! CTLA4);
+  rate_up = @logic ? $u_CTLA4 : 0;
+  rate_down = @logic ? 0 : $d_CTLA4;
+}
+
+Node CD28 {
+  logic = (CD80);
+  rate_up = @logic ? $u_CD28 : 0;
+  rate_down = @logic ? 0 : $d_CD28;
+}
+
+Node CD80 {
+  logic = ((pDC | iDC) & TLR7);
+  rate_up = @logic ? $u_CD80 : 0;
+  rate_down = @logic ? 0 : $d_CD80;
+}
+
+// Inputs and outputs
+
+Node Trigger {
+  logic = (Trigger);
+  rate_up = @logic ? $u_Trigger : 0;
+  rate_down = @logic ? 0 : $d_Trigger;
+}
+
+
+Node Division {
+  rate_up = (Prol_KC ? ($psoKC_prol) : 0.0) + ((IL17R & Prol_KC)? $psoKC_prol : 0.0) + ((IL17R & IL22R & TNFAR & Prol_KC) ? ($psoKC_prol*2) : 0.0) ;
+  rate_down = 0.0;
+}
+
+// In summary, IL-22 inhibited the apoptosis of HEKs induced by TNF-α and IFN-γ, independently with IL-17A https://link.springer.com/article/10.1007/s10495-020-01623-3
+
+Node Death {
+  rate_up = ((Prol_KC ? $psoKC_death : 0.0) + ((IFNAR & TNFAR & Prol_KC) ? $psoKC_death*2 : 0.0) + ((IFNAR & TNFAR & IL22R & Prol_KC) ? 0.003 : 0.0)) ;
+  rate_down = 0.0;
+}
+
+
