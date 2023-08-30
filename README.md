@@ -2,7 +2,9 @@
 
 Files and scripts to reproduce the analysis presented in XX.
 
-## Script Description
+For questions or issues regarding the code or the model, please contact: [Eirini Tsirvouli](eirini.tsirvouli@ntnu.no)
+
+## Notebook & scripts description
 
 ### 1. Sensitivity Analysis
 
