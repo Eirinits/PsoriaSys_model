@@ -2,7 +2,7 @@
 
 Files and scripts to reproduce the analysis presented in XX.
 
-For questions or issues regarding the code or the model, please contact: [Eirini Tsirvouli](eirini.tsirvouli@ntnu.no)
+For questions or issues regarding the code or the model, please contact: [Eirini Tsirvouli](eirinitsirvouli@gmail.com)
 
 ## Notebook & scripts description
 
