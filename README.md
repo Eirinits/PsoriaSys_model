@@ -1,6 +1,6 @@
 # PsoriaSys_model
 
-Files and scripts to reproduce the analysis presented in XX.
+Files and scripts to reproduce the analysis presented in [Dynamic Boolean modeling of molecular and cellular interactions in psoriasis predicts drug target candidates](https://www.cell.com/iscience/fulltext/S2589-0042(24)00080-4?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2589004224000804%3Fshowall%3Dtrue).
 
 For questions or issues regarding the code or the model, please contact: [Eirini Tsirvouli](eirinitsirvouli@gmail.com)
 
